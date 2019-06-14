@@ -1,0 +1,18 @@
+body {
+    min-width: unset !important;
+}
+
+body > div {
+    display: none;
+}
+
+body > div[tpl="calendar_new"] {
+    display: inline-block;
+}
+
+.op-calendar-new-holidaytip {
+    display: none !important;
+}
+.op-calendar-hover-almanac {
+    display: none !important;
+}
