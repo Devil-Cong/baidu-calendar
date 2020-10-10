@@ -6,7 +6,7 @@ body > div {
     display: none;
 }
 
-body > div[tpl="calendar_new"] {
+body > div[tpl="calendar_pc"] {
     display: inline-block;
 }
 
