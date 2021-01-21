@@ -1,6 +1,9 @@
 body {
     min-width: unset !important;
-    overflow: hidden !important;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 body > div {
