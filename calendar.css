@@ -10,7 +10,7 @@ body > div {
     display: none;
 }
 
-body > div[tpl="calendar_pc"] {
+body > div[tpl="ms_calendar"] {
     display: inline-block;
 }
 
