@@ -5,7 +5,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.baidu.com/s?wd=%E4%B8%87%E5%B9%B4%E5%8E%86&bdc=true"
+        "https://www.baidu.com/s?word=%E4%B8%87%E5%B9%B4%E5%8E%86&bdc=true"
       ],
       "all_frames": true,
       "css": [
