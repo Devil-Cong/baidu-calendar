@@ -12,7 +12,7 @@ body > div {
 
 body > div[tpl="ms_calendar_san"] {
     display: inline-block;
-    zoom:  0.86;
+    /*zoom:  0.86;*/
 }
 body > div[tpl="ms_calendar_san"] .cu-border {
     box-shadow: none;
