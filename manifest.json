@@ -31,9 +31,6 @@
         "64": "images/icon_64.png",
         "128": "images/icon_128.png"
     },
-    "background": {
-        "service_worker": "background.js"
-    },
     "permissions": [
         "declarativeNetRequest",
         "declarativeNetRequestWithHostAccess"
