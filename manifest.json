@@ -1,46 +1,53 @@
 {
-  "name": "BaiduCalendar",
-  "version": "1.0",
-  "description": "Baidu Calendar Shortcut",
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.baidu.com/s?word=%E4%B8%87%E5%B9%B4%E5%8E%86&bdc=true"
-      ],
-      "all_frames": true,
-      "css": [
-        "calendar.css"
-      ],
-      "js": [
-        "calendar.js"
-      ],
-      "run_at": "document_end"
+    "name": "BaiduCalendar",
+    "version": "1.0",
+    "description": "Baidu Calendar Shortcut",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.baidu.com/s?word=%E4%B8%87%E5%B9%B4%E5%8E%86&bdc=true"
+            ],
+            "all_frames": true,
+            "css": ["calendar.css"],
+            "js": ["calendar.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon_16.png",
+            "32": "images/icon_32.png",
+            "48": "images/icon_48.png",
+            "64": "images/icon_64.png",
+            "128": "images/icon_128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon_16.png",
+        "32": "images/icon_32.png",
+        "48": "images/icon_48.png",
+        "64": "images/icon_64.png",
+        "128": "images/icon_128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestWithHostAccess"
+    ],
+    "host_permissions": [
+        "https://www.baidu.com/*"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
     }
-  ],
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "images/icon_16.png",
-      "32": "images/icon_32.png",
-      "48": "images/icon_48.png",
-      "64": "images/icon_64.png",
-      "128": "images/icon_128.png"
-    }
-  },
-  "icons": {
-    "16": "images/icon_16.png",
-    "32": "images/icon_32.png",
-    "48": "images/icon_48.png",
-    "64": "images/icon_64.png",
-    "128": "images/icon_128.png"
-  },
-  "manifest_version": 2,
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "https://www.baidu.com/*"
-  ]
 }
